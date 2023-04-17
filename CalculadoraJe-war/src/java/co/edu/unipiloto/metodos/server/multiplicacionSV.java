@@ -19,12 +19,11 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Miguel
  */
-@WebServlet(name = "CalcServlet", urlPatterns = {"/CalcServlet"})
-public class CalcServlet extends HttpServlet {
+@WebServlet(name = "multiplicacionSV", urlPatterns = {"/multiplicacionSV"})
+public class multiplicacionSV extends HttpServlet {
 
     @EJB
     private CalcBinLocal calcBin;
-
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -38,26 +37,18 @@ public class CalcServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        
-        int val1,val2,val3,val4,val5,val6,val7,val8;
+        int val1,val2;
         val1 = Integer.parseInt(request.getParameter("val1")) ;
         val2 = Integer.parseInt(request.getParameter("val2")) ;
-        val3 = Integer.parseInt(request.getParameter("val1")) ;
-        val4 = Integer.parseInt(request.getParameter("val2")) ;
-        val5 = Integer.parseInt(request.getParameter("val1")) ;
-        val6 = Integer.parseInt(request.getParameter("val2")) ;
-        val7 = Integer.parseInt(request.getParameter("val1")) ;
-        val8 = Integer.parseInt(request.getParameter("val2")) ;
-        
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Calculadora</title>");            
+            out.println("<title>Servlet multiplicacionSV</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Su Division es: " + calcBin.Division(val7, val8) + "</h1>");
+            out.println("<h1>Su Multiplicacion es: " + calcBin.multiplicacion(val1, val2)  + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

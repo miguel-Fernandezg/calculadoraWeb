@@ -12,14 +12,42 @@ and open the template in the editor.
     </head>
     <body>
         <h1>Bienvenido a su calculadora</h1>
-   <h3>Ingrese dos valores a operar</h3>
+        <h3>Ingrese dos valores a operar </h3>
         <div>
             <form name="calculadora" action="./CalcServlet">
-            <input type="text" name="val1" value="" />
-            <input type="text" name="val2" value="" />
-            <input type="submit" value="=" /> 
+                <input type="text" name="val1" value="" />
+                <input type="text" name="val2" value="" /> 
+                <br>           
+                <input type="submit" value="/" />
+            </form> 
+            <form name="calculadora" action="./sumaSV">
+                <input type="text" name="val1" value="" />
+                <input type="text" name="val2" value="" /> 
+                <br>
+                <input type="submit" value="+" />
+
+            </form>   
+             <form name="calculadora" action="./restaSV">
+                <input type="text" name="val1" value="" />
+                <input type="text" name="val2" value="" /> 
+                <br>
+                <input type="submit" value="-" />
+
+            </form> 
+             <form name="calculadora" action="./multiplicacionSV">
+                <input type="text" name="val1" value="" />
+                <input type="text" name="val2" value="" /> 
+                <br>
+                <input type="submit" value="*" />
+            </form>  
+             <form name="calculadora" action="./moduloSV">
+                <input type="text" name="val1" value="" />
+                <input type="text" name="val2" value="" /> 
+                <br>
+                <input type="submit" value="%" />
+
+            </form> 
             
-        </form>   
         </div>
     </body>
 </html>

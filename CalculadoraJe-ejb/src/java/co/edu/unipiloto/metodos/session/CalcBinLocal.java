@@ -21,5 +21,7 @@ public interface CalcBinLocal {
     Integer multiplicacion(int val5, int val6);
 
     Integer Division(int val7, int val8);
+
+    Integer modulo(int val1, int val2);
     
 }

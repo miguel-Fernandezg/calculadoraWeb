@@ -14,6 +14,8 @@ import javax.ejb.Stateless;
 @Stateless
 public class CalcBin implements CalcBinLocal {
 
+    
+    
     @Override
     public Integer suma(int val1, int val2) {
         return val1+val2;
@@ -35,6 +37,11 @@ public class CalcBin implements CalcBinLocal {
     @Override
     public Integer Division(int val7, int val8) {
         return val7/val8;
+    }
+
+    @Override
+    public Integer modulo(int val1, int val2) {
+        return Math.floorMod(val1, val2);
     }
 
    
